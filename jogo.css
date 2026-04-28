@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Press+Start+2P&display=swap');
+
+:root {
+    --verde: #4ADE80;
+    --verde-escuro: #16A34A;
+    --verde-cabeca: #86efac;
+    --comida: #f87171;
+    --fundo: #0A0F0A;
+    --fundo-grade: #0d140d;
+    --borda: #1F3320;
+    --texto: #D1FAE5;
+    --esmaecido: #6B7280;
+    --tamanho-celula: 28px;
+    --colunas: 20;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    user-select: none;
+}
+
+.hud {
+    width: 100%;
+    max-width: calc(var(--tamanho-celula) * var(--colunas) + 4px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    gap: 8px;
+}
+
+.btn-menu {
+    font-size: 0.75rem;
+    color: var(--esmaecido);
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    transition: color 0.3s, border-color 0.3s;
+    white-space: nowrap;
+}
+
+.btn-menu:hover {
+    color: var(--verde);
+    border-color: var(--verde);
+}
+
+.hud-centro,
+.hud-direita {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label-hud {
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing:1.5px;
+    color: var(--esmaecido);
+}
+
+.valor-hud {
+    font-family: "Press Start 2P";
+    font-size: 1rem;
+    color: var(--verde);
+    line-height: 1.4;
+}
+
+.arena {
+    position: relative;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(var(--colunas), var(--tamanho-celula));
+    grid-template-rows: repeat(var(--colunas), var(--tamanho-celula));
+    background: var(--fundo-grade);
+    border: 2px solid var(--borda);
+    border-radius: 4px;
+    gap: 1px;
+    padding: 1px;
+    background-image:
+        linear-gradient(var(--borda) 1px, transparent 1px),
+        linear-gradient(90deg, var(--borda) 1px, transparent 1px);
+    background-size: calc(var(--tamanho-celula) + 1px) calc(var(--tamanho-celula) + 1px);
+    
+
+}

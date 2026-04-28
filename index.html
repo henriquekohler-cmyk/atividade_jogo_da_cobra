@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da cobra</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark">
+            <div class="container">
+                <span class="navbar-brand fw-bold fs-4">🐍 Jogo da Cobra</span>
+                <span class="navbar-text" id="nav-recorde">Recorde: </span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 text-center">
+                <div class="titulo-bloco mb-4">
+                    <h1 class="display-3 fw-bold titulo-jogo">COBRA</h1>
+                    <p class="lead subtitulo">Use as setas do teclado para guiar a cobra.<br>Coma a comida.Não bata nas
+                        paredes.</p>
+                </div>
+
+                <div class="card card-recorde mb-4">
+                    <div class="card-body py-3">
+                        <div class="row align-itens-center">
+                            <div class="col">
+                                <span class="label-card">Melhor Pontuação</span>
+                                <div class="valor-recorde" id="recorde-display">0</div>
+                            </div>
+                            <div class="col-auto">
+                                <span class="icone-trofeu">🏆</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <p class="label-secao mb-2">Dificuldade</p>
+                    <div class="btn-group w-100" role="group">
+                        <input type="radio" class="btn-check" name="dificuldade" id="facil" value="200">
+                        <label for="facil" class="btn btn-outline-dif">Fácil</label>
+                        <input type="radio" class="btn-check" name="dificuldade" id="media" value="130">
+                        <label for="media" class="btn btn-outline-dif">Média</label>
+                        <input type="radio" class="btn-check" name="dificuldade" id="dificil" value="70">
+                        <label for="dificil" class="btn btn-outline-dif">Dificíl</label>
+                    </div>
+                </div>
+
+                <a href="jogo.html" class="btn btn-jogar w-100 mb-3" id="btn-jogar">
+                    JOGAR
+                </a>
+
+                <div class="card card-instrucoes">
+                    <div class="card-body">
+                        <p class="label-card mb-3">Como jogar</p>
+                        <div class="row g-2 text-start">
+                            <div class="col-6">
+                                <div class="intrucao-item">⬆️⬇️⬅️➡️ Mover</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="intrucao-item">🍎 +10 pontos</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="intrucao-item">🚧 Evite paredes</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="intrucao-item">🐍 Evite seu corpo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
