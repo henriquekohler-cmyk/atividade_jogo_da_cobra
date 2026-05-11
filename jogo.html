@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jogo.css">
+    <title>Snake Game</title>
+</head>
+<body>
+    
+    <!-- HUD -->
+    <div class="hud">
+        <a href="index.html" class="btn-menu">Menu</a>
+        <div class="hud-centro">
+            <spna class="label-hud">Pontuação</spna>
+            <span class="valor-hud" id="Pontuação">0</span>
+        </div>
+        <div class="hud-direita">
+            <span class="label-hud">Recorde</span>
+            <span class="valor-hud" id="recorde">0</span>
+        </div>
+    </div>
+
+    <!-- GRID DO JOGO -->
+    <div class="arena">
+        <div class="grade" id="grade"></div>
+        
+        <!-- TELA DE FIM DE JOGO -->
+        <div class="overlay" id="overlay">
+            <div class="overlay-conteudo">
+                <p class="overlay-titulo" id="overlay-titulo">FIM DE JOGO</p>
+                <p class="overlay-pontos" id="overlay-pontos">0 pontos</p>
+                <p class="overlay-recorde" id="overlay-recorde"></p>
+                <button class="btn-reiniciar" onclick="reiniciar()">Jogar novamente</button>
+                <a href="index.html" class="btn-voltar">Voltar ao menu</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CONTROLES SMARTPHONE -->
+    <div class="controles-smartphone">
+        <div class="linha-controle">
+            <button class="btn-direcao" onclick="mudarDirecao('ArrowUp')">▲</button>
+        </div>
+        <div class="linha-controle">
+            <button class="btn-direcao" onclick="mudarDirecao('ArrowLeft')">◀</button>
+            <button class="btn-direcao" onclick="mudarDirecao('ArrowDown')">▼</button>
+            <button class="btn-direcao" onclick="mudarDirecao('ArrowRight')">▶</button>
+        </div>
+    </div>
+
+    <script src="jogo.js"></script>
+</body>
+</html>
